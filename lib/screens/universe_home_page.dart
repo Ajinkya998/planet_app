@@ -63,11 +63,11 @@ class _UniverseHomePageState extends State<UniverseHomePage> {
                 ),
               ),
               Container(
-                height: 625,
+                height: MediaQuery.of(context).size.height * 0.7,
                 padding: const EdgeInsets.symmetric(horizontal: 0),
                 child: Swiper(
                   itemCount: planets.length,
-                  itemHeight: 625,
+                  itemHeight: MediaQuery.of(context).size.height * 0.7,
                   itemWidth: double.infinity,
                   layout: SwiperLayout.TINDER,
                   physics: const BouncingScrollPhysics(),
@@ -94,7 +94,7 @@ class _UniverseHomePageState extends State<UniverseHomePage> {
                         children: [
                           Column(
                             children: [
-                              const SizedBox(height: 100),
+                              const SizedBox(height: 50),
                               Card(
                                 elevation: 10,
                                 color: Colors.white,
@@ -151,8 +151,8 @@ class _UniverseHomePageState extends State<UniverseHomePage> {
                               tag: planets[index].id,
                               child: Image.asset(planets[index].iconImage)),
                           Positioned(
-                            right: 40,
-                            bottom: 120,
+                            right: 10,
+                            bottom: 70,
                             child: Text(
                               planets[index].id.toString(),
                               style: TextStyle(
